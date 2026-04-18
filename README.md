@@ -1,95 +1,67 @@
 # Freight Delay Operational Analysis
 
-## Overview
+## Project Overview
 
-This project analyzes freight delivery performance using a simulated dataset modeled on real-world trucking operations.  
-The goal is to provide clear, decision-focused insights into service reliability, delay patterns, and operational risk.
+This project analyzes freight delay performance across carriers, dispatchers, and terminals to identify operational inefficiencies and root causes of service failures.
 
-The dashboard is built in Power BI and is designed for operations managers, dispatch teams, and logistics analysts.
-
----
-
-## Business Problem
-
-Freight operations require clear visibility into delivery performance and delay drivers.  
-This dashboard was built to help answer three key operational questions:
-
-- Are loads being delivered on time at an acceptable rate?
-- Where are failures and delays concentrated across terminals and carriers?
-- What are the primary root causes driving delay performance?
+The goal is to move beyond simple reporting and provide insights into **why delays occur**, how they impact service levels, and where operational improvements can be made.
 
 ---
 
-## Dashboard Structure
+## Business Questions
 
-### 1. Executive Overview
+This analysis focuses on answering:
 
-Provides a high-level snapshot of performance:
-
-- Total Loads
-- On-Time %
-- Failure %
-- Average Delay (minutes)
-
-Visuals include:
-- Service level distribution (On-Time, At-Risk, Failure)
-- Failure volume by terminal
-
-👉 Purpose: Quickly assess overall operational health
+1. What percentage of freight is delivered on time versus at risk or failed?
+2. Which terminals, carriers, and dispatchers contribute most to delays?
+3. What are the primary causes of delays, and who is responsible?
 
 ---
 
-### 2. Root Cause Analysis
+## Key Insight
 
-Breaks down what is driving delays:
+Average delay is influenced by infrequent but severe disruptions (e.g., breakdowns, weather events such as winter storms, high winds, hurricanes, tornadoes, and inspections).
 
-- Average delay by carrier
-- Average delay by dispatcher
-- Delay cause distribution
-- Responsibility breakdown:
-  - Carrier
-  - External (weather, inspections, road closures)
-  - Shipper/Receiver
-  - Driver (small but realistic share)
-- Monthly delay trend
-
-👉 Purpose: Identify where intervention is needed
+While the majority of loads are delivered on time, these high-impact events significantly increase the overall average delay.
 
 ---
 
-## Key Insights
+## Dashboard Preview
 
-- Most loads are delivered on time (~75–80%), reflecting realistic operational performance
-- Failures are concentrated in specific terminals rather than evenly distributed
-- The largest delay drivers are:
-  - Traffic
-  - Dock delays
-  - Weather-related disruptions
-- Severe disruptions (breakdowns, storm closures, inspections) are less frequent but drive major delay spikes
-- Responsibility is distributed across multiple parties, not just carriers
+### Executive Overview
 
----
+![Executive Overview](images/Executive Overview.png)
 
-## Data Notes
+### Root Cause Analysis
 
-This dataset was intentionally designed to reflect real-world trucking behavior:
-
-- Drivers adjust departure times for known risks (weather, traffic, appointments)
-- Not all delays are failures—buffer time and planning matter
-- True disruptions (e.g., breakdowns, road closures, severe weather events) create the most significant impact
-- External factors (weather, inspections, regional events) play a major role in delays
-
-Additional disruption scenarios included:
-- Winter storm road closures
-- High wind shutdowns
-- Hurricane and tornado impacts (region-specific)
+![Root Cause Analysis](images/Performance Analysis.png)
 
 ---
 
 ## Tools Used
 
-- Power BI (data modeling and dashboard design)
-- Python (data simulation and transformation)
+* Power BI (data modeling and dashboard design)
+* Python (data simulation and transformation)
+
+---
+
+## Repository Structure
+
+```
+freight-delay-operational-analysis/
+│
+├── dashboard/
+│   └── Freight_Delay_Operational_Performance.pbix
+│
+├── data/
+│   └── freight_delay_final.csv
+│
+├── images/
+│   ├── Executive Overview.png
+│   └── Performance Analysis.png
+│
+└── README.md
+```
 
 ---
 
@@ -98,8 +70,17 @@ Additional disruption scenarios included:
 1. Open the `.pbix` file in Power BI Desktop
 2. Use the date slicer to filter performance over time
 3. Navigate between:
-   - Executive Overview (high-level performance)
-   - Root Cause Analysis (detailed breakdown)
+
+   * **Executive Overview** (high-level performance metrics)
+   * **Root Cause Analysis** (detailed breakdown of delays)
+
+---
+
+## Notes
+
+* The dataset is synthetically generated but designed to reflect real-world trucking operations.
+* Delay distributions include both common operational friction (traffic, dock delays) and rare high-impact disruptions (weather events, breakdowns).
+* The dashboard is designed with a focus on decision-making rather than exploratory analysis.
 
 ---
 
