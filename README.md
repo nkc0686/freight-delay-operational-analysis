@@ -93,11 +93,6 @@ Additional disruption scenarios included:
 
 ---
 
-## Repository Structure
-
-
----
-
 ## How to Use
 
 1. Open the `.pbix` file in Power BI Desktop
