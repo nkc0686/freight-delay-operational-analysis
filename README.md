@@ -29,12 +29,10 @@ While the majority of loads are delivered on time, these high-impact events sign
 ## Dashboard Preview
 
 ### Executive Overview
-
-![Executive Overview](images/Executive Overview.png)
+![Executive Overview](images/executive_overview.png)
 
 ### Root Cause Analysis
-
-![Root Cause Analysis](images/Performance Analysis.png)
+![Root Cause Analysis](images/root_cause_analysis.png)
 
 ---
 
