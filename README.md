@@ -22,24 +22,26 @@ This analysis focuses on answering:
 
 Average delay is influenced by infrequent but severe disruptions (e.g., breakdowns, weather events such as winter storms, high winds, hurricanes, tornadoes, and inspections).
 
-While the majority of loads are delivered on time, these high-impact events significantly increase the overall average delay.
+While the majority of loads are delivered on time, these high-impact events disproportionately increase overall delay — suggesting that operational improvements should focus on mitigating rare but disruptive events rather than only optimizing routine operations.
 
 ---
 
 ## Dashboard Preview
 
 ### Executive Overview
-![Executive Overview](images/executive_overview.png)
+
+![Executive Overview](images/Executive%20Overview.png)
 
 ### Root Cause Analysis
-![Root Cause Analysis](images/root_cause_analysis.png)
+
+![Root Cause Analysis](images/Performance%20Analysis.png)
 
 ---
 
 ## Tools Used
 
 * Power BI (data modeling and dashboard design)
-* Python (data simulation and transformation)
+* Python (synthetic data generation and transformation)
 
 ---
 
@@ -56,7 +58,10 @@ freight-delay-operational-analysis/
 │
 ├── images/
 │   ├── Executive Overview.png
-│   └── Performance Analysis.png
+│   └── Root Cause Analysis.png
+│
+├── scripts/
+│   └── generate_freight_delay_data.py
 │
 └── README.md
 ```
@@ -65,9 +70,10 @@ freight-delay-operational-analysis/
 
 ## How to Use
 
-1. Open the `.pbix` file in Power BI Desktop
-2. Use the date slicer to filter performance over time
-3. Navigate between:
+1. (Optional) Run `scripts/generate_freight_delay_data.py` to regenerate the dataset
+2. Open the `.pbix` file in Power BI Desktop
+3. Use the date slicer to filter performance over time
+4. Navigate between:
 
    * **Executive Overview** (high-level performance metrics)
    * **Root Cause Analysis** (detailed breakdown of delays)
@@ -84,5 +90,5 @@ freight-delay-operational-analysis/
 
 ## Disclaimer
 
-This dataset is simulated for portfolio purposes.  
+This dataset is simulated for portfolio purposes.
 It is designed to reflect realistic freight operations but does not represent any specific company.
