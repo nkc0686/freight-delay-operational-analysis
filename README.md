@@ -45,10 +45,10 @@ These insights support safety, compliance, and operations teams in reducing serv
 ## Dashboard Preview
 
 ### Executive Overview
-![Executive Overview](images/Executive%20Overview.png)
+![Executive Overview](images/executive_overview.png)
 
 ### Root Cause Analysis
-![Root Cause Analysis](images/Root%20Cause%20Analysis.png)
+![Root Cause Analysis](images/root_cause_analysis.png)
 
 ---
 
